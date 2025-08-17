@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+
+    <style>
+        /* --- CSS Interno --- */
+        :root {
+            --azul-oscuro: #2c3e50;
+            --azul-medio: #34495e;
+            --azul-claro: #5d7d9a;
+            --gris-claro: #ecf0f1;
+            --blanco: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--gris-claro);
+            color: var(--azul-oscuro);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Encabezado y Navegación */
+        header {
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--azul-claro);
+        }
+
+        /* Sección de Inicio (Hero) con Foto a la Izquierda */
+        .hero {
+            display: flex;
+            flex-direction: column; /* Por defecto, en columna para móviles */
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--azul-medio);
+            color: var(--blanco);
+        }
+
+        .hero-content {
+            margin-top: 20px; /* Espacio para móviles */
+        }
+
+        .perfil-img-grande {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--blanco);
+        }
+        
+        /* Media Query para escritorio */
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row; /* En fila para pantallas grandes */
+                text-align: left;
+                justify-content: center;
+                gap: 50px; /* Espacio entre la imagen y el texto */
+            }
+
+            .hero-content {
+                margin-top: 0;
+                width: 50%;
+            }
+        }
+        
+        /* Secciones Generales */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .card {
+            background: var(--blanco);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        /* Pie de Página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--azul-oscuro);
+            color: var(--blanco);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Mi Portafolio</h1>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <img src="JF.jpg" alt="Foto de Perfil" class="perfil-img-grande">
+            <div class="hero-content">
+                <h2>¡Hola, soy Juan Francisco Jochola Escobar!</h2>
+                <p>Perfil
+Mecánico, con estudios en Ing. Mecatrónica y Ing. Sistema, con experiencia en concesionarios de alto nivel en la planeación, logística y puesta en marcha de los programas de control
+he implementación de proyectos.
+</p>
+                <p>Me especializo en el desarrollo front-end y back-end con PHP.</p>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="container">
+            <h2>Sobre Mí</h2>
+            <p>
+            Ingeniero en Mecatrónica (Universidad Galileo) | Estudiante de Ingeniería en Sistemas (UMG)
+
+Profesional con más de 12 años de experiencia en logística y cadena de suministros, especializado en gestión de transporte y optimización de procesos. He liderado operaciones en sectores clave como consumo masivo, automotriz y agrícola, implementando soluciones tecnológicas y estratégicas para mejorar la eficiencia, reducir costos y garantizar la entrega oportuna.
+
+Mi formación en mecatrónica y mi actual especialización en ingeniería de sistemas me permiten integrar conocimientos técnicos avanzados (automatización, análisis de datos) con la gestión operativa, ofreciendo una perspectiva única para resolver desafíos complejos en la cadena de valor.
+</p>
+        </section>
+
+        <section id="proyectos" class="container">
+            <h2>Mis Proyectos</h2>
+            <div class="proyectos-grid">
+                <div class="card">
+                    <h3>Proyecto 1: Automatizacion de Distribucion</h3>
+                    <p>Lideré la creación e implementación de un sistema de distribución inteligente para transporte refrigerado (perecederos, vegetales, carnes y abarrotes) en GTA, optimizando rutas y horarios con precisión.
+
+Solución:
+Desarrollé un modelo algorítmico que:
+
+Automatizó la generación de líneas de distribución, clasificando mercancías por tipo, temperatura y urgencia.
+
+Eliminó cruces de horarios entre rutas, garantizando entregas puntuales.
+
+Incorporó un margen de error de solo 15 minutos, mejorando la eficiencia operativa y reduciendo mermas.
+
+Impacto:
+
+Reducción de costos por optimización de combustible y recursos humanos.
+
+Mayor satisfacción del cliente gracias a la precisión en los tiempos de entrega.
+
+Escalabilidad: Modelo adaptable a otras industrias con necesidades logísticas complejas.
+
+Tecnologías/Habilidades aplicadas:
+
+Análisis de datos geoespaciales.
+
+Gestión de flotas y cadena de frío.
+
+Pensamiento algorítmico y resolución de problemas.</p>
+                </div>
+                <div class="card">
+                    <h3>Proyecto 2: Desarrollo de Automatizacion de Pagos</h3>
+                    <p>Automatización y Gestión Integral de Transporte: Desarrollar una aplicación web avanzada que permita la automatización del registro de asistencia de los buses, optimizando la entrada de datos y reduciendo errores humanos. La plataforma incluirá captura de datos en tiempo real y la  generación de reportes detallados para decisiones estratégicas.
+</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="contacto" class="container">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través de:</p>
+            <ul>
+                <li>Correo electrónico: <a href="mailto:juanfrancisco012@gmail.com">tu-correo@ejemplo.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/juan-francisco-jochola-escobar-489392159/" target="_blank">linkedin.com/in/tuperfil</a></li>
+                <li>GitHub: <a href="https://github.com/juanfra012" target="_blank">github.com/tuusuario</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <?php echo date("Y"); ?> Tu Nombre. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
